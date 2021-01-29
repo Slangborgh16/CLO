@@ -62,7 +62,7 @@ except:
 print("Connection established")
 
 print("\nUse the arrow keys or W,A,S,D")
-print("Press \'q\' to quit and press \'p\' to ping board")
+print("Press \'q\' to quit")
 sleep(0.5)
 
 #Sends keyboard data to the board
@@ -96,6 +96,7 @@ while True:
     elif (keyboard.is_pressed('d') or keyboard.is_pressed('right')):
         connection.write(bytes('e', 'utf-8'))
     elif (keyboard.is_pressed('p')):
+        print("Ping!")
         connection.write(bytes('p', 'utf-8'))
 
     sleep(0.02)
